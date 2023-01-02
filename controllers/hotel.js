@@ -61,6 +61,7 @@ export const getHotels = async (req, res, next) => {
   }
 };
 
+//get hotel by city
 export const countByCity = async (req, res, next) => {
   const cities = req.query.cities.split(",");
   try {
@@ -75,6 +76,7 @@ export const countByCity = async (req, res, next) => {
   }
 };
 
+// get hoteltypes
 export const countByType = async (req, res, next) => {
   try {
     const hotelCount = await Hotel.countDocuments({ type: "hotel" });
