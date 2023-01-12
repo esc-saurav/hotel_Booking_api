@@ -6,7 +6,8 @@ import {
   getHotel,
   getHotels,
   countByCity,
-  countByType
+  countByType,
+  getHotelRooms,
 } from "../controllers/hotel.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
 
@@ -28,5 +29,7 @@ router.get("/countByCity", countByCity);
 
 //by types
 router.get("/countByType", countByType);
+
+router.get("/room/:id", getHotelRooms);
 
 export default router;
