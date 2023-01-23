@@ -12,7 +12,7 @@ export const createHotel = async (req, res, next) => {
   }
 };
 
-//update
+//update hotel
 export const updateHotel = async (req, res, next) => {
   try {
     const updatedHotel = await Hotel.findByIdAndUpdate(
@@ -28,7 +28,7 @@ export const updateHotel = async (req, res, next) => {
   }
 };
 
-//delete
+//delete hotel
 export const deleteHotel = async (req, res, next) => {
   try {
     await Hotel.findByIdAndDelete(req.params.id);
@@ -98,6 +98,7 @@ export const countByType = async (req, res, next) => {
   }
 };
 
+//get hotel rooms
 export const getHotelRooms = async (req, res, next) => {
   try {
     const hotel = await Hotel.findById(req.params.id);
@@ -111,3 +112,4 @@ export const getHotelRooms = async (req, res, next) => {
     next(err);
   }
 };
+

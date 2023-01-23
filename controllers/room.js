@@ -1,6 +1,5 @@
 import Room from "../models/Room.js";
 import Hotel from "../models/Hotel.js";
-import { createError } from "../utils/error.js";
 
 export const createRoom = async (req, res, next) => {
   const hotelId = req.params.hotelid;
@@ -74,7 +73,7 @@ export const getRooms = async (req, res, next) => {
     next(err);
   }
 };
-
+//chech room availability
 export const updateRoomAvailability = async (req, res, next) => {
   try {
     await Room.updateOne(

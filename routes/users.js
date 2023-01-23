@@ -21,15 +21,11 @@ const router = express.Router();
 //   res.send("Hello admin  you are loggged in and you can delete all account")
 // })
 
-
-
-//update
 router.put("/:id", verifyUser, updateUser);
-//Delete
 router.delete("/:id", verifyUser, deleteUser);
-//get
 router.get("/:id", verifyUser, getUser);
-//get all
-router.get("/",verifyAdmin, getUsers);
+router.get("/", verifyAdmin, getUsers);
 
 export default router;
+
+
